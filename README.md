@@ -22,7 +22,7 @@ Either run
 
 or add
 
-`"sergmoro1/yii2-comment": "~1.0"`
+`"sergmoro1/yii2-comment": "dev-master"`
 
 to the require section of your composer.json.
 

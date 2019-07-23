@@ -14,13 +14,14 @@
             "email": "sergmoro1@ya.ru"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*",
-        "sergmoro1/yii2-lookup" : "*",
-        "sergmoro1/yii2-modal-crud" : "*",
-        "sergmoro1/yii2-user" : "*"
+        "sergmoro1/yii2-lookup" : "dev-master",
+        "sergmoro1/yii2-modal-crud" : "dev-master",
+        "sergmoro1/yii2-user" : "dev-master"
     },
     "autoload": {
         "psr-4": {
