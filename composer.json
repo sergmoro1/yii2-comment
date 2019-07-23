@@ -18,9 +18,9 @@
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*",
-        "sergmoro1/yii2-lookup" : "~2.0",
-        "sergmoro1/yii2-modal-crud" : "~1.0",
-        "sergmoro1/yii2-user" : "~1.0"
+        "sergmoro1/yii2-lookup" : "*",
+        "sergmoro1/yii2-modal-crud" : "*",
+        "sergmoro1/yii2-user" : "*"
     },
     "autoload": {
         "psr-4": {
