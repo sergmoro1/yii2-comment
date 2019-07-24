@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
 
-use sergmoro1\rudate\RuDate;
+use sergmoro1\rukit\behaviors\FullDateBehavior;
 use sergmoro1\lookup\models\Lookup;
 use sergmoro1\comment\Module;
 
@@ -60,10 +60,8 @@ class BaseComment extends ActiveRecord
     public function behaviors()
     {
         return [
-            [
-                'class' => TimestampBehavior::className(),
-            ],
-            'RuDate' => ['class' => RuDate::className()],
+            ['class' => TimestampBehavior::className()],
+            ['class' => FullDateBehavior::className()],
          ];
     }
 
