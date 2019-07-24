@@ -39,12 +39,12 @@ class m180206_175933_create_comment extends Migration
         $this->addForeignKey ('fk-comment-user', static::TABLE_COMMENT, 'user_id', static::TABLE_USER, 'id', 'CASCADE');
 
         $this->addCommentOnColumn(static::TABLE_COMMENT, 'model',     'Model code');
-		$this->addCommentOnColumn(static::TABLE_COMMENT, 'parent_id', 'Parent ID in a model');
-		$this->addCommentOnColumn(static::TABLE_COMMENT, 'user_id',   'User ID who left the comment');
-		$this->addCommentOnColumn(static::TABLE_COMMENT, 'content',   'Content');
-		$this->addCommentOnColumn(static::TABLE_COMMENT, 'status',    'Status');
-		$this->addCommentOnColumn(static::TABLE_COMMENT, 'thread',    'Unique conversation code');
-		$this->addCommentOnColumn(static::TABLE_COMMENT, 'last',      'Is that the last reply in the conversation?');
+        $this->addCommentOnColumn(static::TABLE_COMMENT, 'parent_id', 'Parent ID in a model');
+        $this->addCommentOnColumn(static::TABLE_COMMENT, 'user_id',   'User ID who left the comment');
+        $this->addCommentOnColumn(static::TABLE_COMMENT, 'content',   'Content');
+        $this->addCommentOnColumn(static::TABLE_COMMENT, 'status',    'Status');
+        $this->addCommentOnColumn(static::TABLE_COMMENT, 'thread',    'Unique conversation code');
+        $this->addCommentOnColumn(static::TABLE_COMMENT, 'last',      'Is that the last reply in the conversation?');
     }
 
     public function safeDown()
