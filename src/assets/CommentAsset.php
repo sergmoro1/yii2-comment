@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
 
 class CommentAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/sergmoro1/yii2-comment/src/assets';
+    public $sourcePath = '@vendor/sergmoro1/yii2-comment/src/assets/dist';
 
     public $css = [
     ];
