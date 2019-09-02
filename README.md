@@ -4,12 +4,11 @@ Yii2 module for comment management
 Advantages
 ----------
 
-Used with sergmoro1/yii2-blog-tools module.
+Backend comment management. Ready to use widgets for frontend. Used with sergmoro1/yii2-blog-tools module.
 
+* reply to the comment;
 * approve comment or send it to archive;
-* email sending about new comment;
-* ready to use widgets for frontend;
-* comment management in backend.
+* email notification about new comment.
 
 Installation
 ------------
