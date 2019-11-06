@@ -1,0 +1,30 @@
+{
+    "name": "sergmoro1/yii2-comment",
+    "description": "Comment management. Reply, edit, approve. Chain of comments. Registered users only.",
+    "keywords": [
+        "yii2",
+        "comment", "reply",
+        "approve", "management"
+    ],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Morozov",
+            "email": "sergmoro1@ya.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "sergmoro1/yii2-lookup": "^1.1",
+        "sergmoro1/yii2-modal-crud": "^1.0",
+        "sergmoro1/yii2-user": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "sergmoro1\\comment\\": "src"
+        }
+    }
+}
