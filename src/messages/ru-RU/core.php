@@ -18,14 +18,22 @@
  */
 return [
     'Created' => 'Создано',
+    'Content' => 'Содержание',
     'Email' => '',
+    'Leave a comment' => 'Оставьте комментарий',
     'Modified' => 'Изменено',
     'Name' => 'Имя',
     'Reply' => 'Ответить',
+    'Only authorized users can leave comments. Please {log-in} or pass a {registration}.' => 
+        'Только зарегистрированные пользователи могут оставлять комментарии. Пожалуйста {log-in} или пройдите {registration}.',
+    'Please enter your comment here' => 'Пожалуйста, введите ваш комментарий здесь',
     'Save' => 'Сохранить',
     'Status' => 'Статус',
     'Submit' => 'Отправить',
     'The requested model does not exist.' => 'Запрошенная модель не существует.',
     'Update' => 'Изменить',
     'Username' => 'Логин',
+    'Your answer' => 'Ваш ответ',
+    'log in' => 'войдите',
+    'registration' => 'регистрацию',
 ];

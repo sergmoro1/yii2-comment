@@ -40,12 +40,12 @@ use sergmoro1\user\widgets\SocialCredentials;
 	<?php endif; ?>
     
     <!-- Place "More comments" button if more comments exist -->
-	<?php if($commentCount > \Yii::$app->params['commentsPerPage']): ?>
+	<?php if($commentCount > Yii::$app->params['commentsPerPage']): ?>
 	<p class="text-right">
 		<a href="javascript:;" class="pure-button load-more-btn" onclick=""
             data-href="<?= Url::to(['post/more-comments']) ?>" 
             data-slug="<?= $model->slug ?>"
-            data-offset="<?= \Yii::$app->params['commentsPerPage'] ?>">
+            data-offset="<?= Yii::$app->params['commentsPerPage'] ?>">
             <span title="<?= Module::t('core', 'More comments') ?>">
                 <i class="fas fa-comments"></i> ...
             </span>
@@ -57,7 +57,7 @@ use sergmoro1\user\widgets\SocialCredentials;
 	<div class="leave-comment"> <!--leave comment-->
 		<h3 class="reply-heading"><?= Module::t('core', 'Leave a comment'); ?></h3>
 
-        <?php if(!\Yii::$app->user->isGuest): ?>
+        <?php if(!Yii::$app->user->isGuest): ?>
 		<div class="answer">
 			<h4></h4>
 			<div class="apponent"></div>
@@ -71,7 +71,7 @@ use sergmoro1\user\widgets\SocialCredentials;
         <?php endif; ?>
 	</div>
 	</a>
-    <?php if(\Yii::$app->user->isGuest): ?>
+    <?php if(Yii::$app->user->isGuest): ?>
         <p class=="need-to register">
             <?= Module::t('core', 'Only authorized users can leave comments. Please {log-in} or pass a {registration}.' , [
                 'log-in' => Html::a(Module::t('core', 'log in'), ['site/login']),
