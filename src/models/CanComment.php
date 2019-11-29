@@ -58,6 +58,19 @@ trait CanComment {
     }
 
     /**
+     * Get count of threads for model.
+     * @return integer
+     */
+    public function getThreadCount()
+    {
+        return Comment::find()->select(['thread'])->where([
+            'model'     => self::COMMENT_FOR,
+            'parent_id' => $this->id,
+            'status'    => Comment::STATUS_APPROVED,
+            ])->distinct()->count();
+    }
+
+    /**
      * Adds a new comment for the model.
      * @param  object of comment to be added
      * @return boolean whether the comment is saved successfully

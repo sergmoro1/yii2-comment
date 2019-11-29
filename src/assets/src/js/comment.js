@@ -1,15 +1,11 @@
 /*
+ * Comments are linked in the thread. 
+ * Last comment in a thread can be replied. 
+ * 
  * @author sergmoro1@ya.ru
  * @license - MIT
  * 
- * Similar comments are linked in the thread. 
- * You can reply to comments. 
- * You can only reply to the last comment in the thread.
- * 
- * The first appCanComments.comment.limit comments are loaded.
- * Then the next appCanComments.comment.limit comments can be loaded.
- * 
- * Something in a views/index.php
+ * Somewhere in a views/index.php
  * 
  * $app = [
  *   'actions' => [
@@ -17,8 +13,7 @@
  *   ],
  *   'buttons' => [],
  *   'comment' => [
- *       'limit=' => \Yii::$app->params['commentsPerPage'],
- *       'message' => \Yii::t('app', 'Please, fill in field "{field}".', ['field' => $model->getAttributeLabel($attribute)]),
+ *       'message' => Yii::t('app', 'Please, fill in field "{field}".', ['field' => $model->getAttributeLabel($attribute)]),
  *   ],
  * ];
  * $this->registerJS('var appCanComments=' . json_encode($app), \yii\web\View::POS_READY);
@@ -90,26 +85,25 @@ var appCanComments = appCanComments || {buttons:{}};
      */
     app.buttons.loadMore = function() {
         var that = $(this);
-        var btn = $('#comments .load-more-btn');
+        var btn = that;
         // if no more comments then button was disabled
-        if(that.attr('disabled') === 'disabled') {
+        if(btn.attr('disabled') === 'disabled') {
             return false;
         }
         $.ajax({
             // url and params were saved in a link
-            url: that.attr('data-href'),
-            data: {slug: that.attr('data-slug'), offset: that.attr('data-offset')},
+            url: that.data('href'),
+            data: {slug: that.data('slug'), offset: that.data('offset')},
             async: false,
             success: function(response) {
                 if(response == false) {
                     // disable button
-                    btn.attr('disabled', 'disabled');
+                    btn.attr('disabled', 'disabled')
                 } else {
                     // append next comments to the list
                     $('.comment-section .comment-list').append(response);
                     // change offset to the next portion
-                    var offset = Number(btn.attr('data-offset'));
-                    btn.attr('data-offset', offset + app.comment.limit);
+                    btn.data('offset', Number(btn.data('offset')) + Number(btn.data('step')));
                 }
             },
             error: function(e) {

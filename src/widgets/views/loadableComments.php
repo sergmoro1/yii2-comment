@@ -19,7 +19,7 @@ use sergmoro1\user\widgets\SocialCredentials;
 <div id="comments" class="post-comments">
     
     <!-- A first of comments -->
-	<?php if(($commentCount = $model->commentCount) >= 1): ?>
+	<?php if (($commentCount = $model->commentCount) >= 1): ?>
 	<div class="comment-section">
 		<h3>
 			<?= $commentCount > 1 
@@ -40,11 +40,12 @@ use sergmoro1\user\widgets\SocialCredentials;
 	<?php endif; ?>
     
     <!-- Place "More comments" button if more comments exist -->
-	<?php if($commentCount > Yii::$app->params['commentsPerPage']): ?>
+	<?php if($model->threadCount > Yii::$app->params['commentsPerPage']): ?>
 	<p class="text-right">
-		<a href="javascript:;" class="pure-button load-more-btn" onclick=""
+		<a href="javascript:;" class="pure-button load-more-btn"
             data-href="<?= Url::to(['post/more-comments']) ?>" 
             data-slug="<?= $model->slug ?>"
+            data-step="<?= Yii::$app->params['commentsPerPage'] ?>"
             data-offset="<?= Yii::$app->params['commentsPerPage'] ?>">
             <span title="<?= Module::t('core', 'More comments') ?>">
                 <i class="fas fa-comments"></i> ...

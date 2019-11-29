@@ -5,7 +5,7 @@ namespace sergmoro1\comment\widgets;
 use yii\base\Widget;
 
 use sergmoro1\blog\Module;
-use sergmoro1\blog\assets\CommentAsset;
+use sergmoro1\comment\assets\CommentAsset;
 
 /**
  * Loadable comments widget.
